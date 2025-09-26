@@ -1,25 +1,19 @@
 plugins {
-  kotlin("jvm")
-  kotlin("plugin.spring")
-  id("org.springframework.boot")
-  id("io.spring.dependency-management")
+  alias(libs.plugins.kotlin.jvm)
+  alias(libs.plugins.kotlin.spring)
+  alias(libs.plugins.spring.boot)
+  alias(libs.plugins.spring.dependency.management)
 }
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter-web")
-  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-  implementation("org.jetbrains.kotlin:kotlin-reflect")
-  testImplementation("org.springframework.boot:spring-boot-starter-test")
-  testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-}
+  // Common Spring dependencies using version catalog
+  implementation(libs.bundles.spring.common)
 
-kotlin {
-  compilerOptions {
-    freeCompilerArgs.addAll("-Xjsr305=strict")
-  }
-}
+  // Test dependencies
+  testImplementation(libs.bundles.spring.test)
+  testRuntimeOnly(libs.junit.platform.launcher)
 
-tasks.withType<Test> {
-  useJUnitPlatform()
+  // Add module-specific dependencies here if needed
+  // implementation(libs.spring.boot.starter.data.jpa)
+  // implementation(libs.spring.boot.starter.validation)
 }
