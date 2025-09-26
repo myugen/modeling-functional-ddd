@@ -1,4 +1,4 @@
-package dev.myugen.ordertaking
+package dev.myugen.modelingfunctionalddd.ordertaking
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class OrderTakingApplication
 
 fun main(args: Array<String>) {
-    runApplication<OrderTakingApplication>(*args)
+  runApplication<OrderTakingApplication>(*args)
 }
