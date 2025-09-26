@@ -16,16 +16,12 @@ allprojects {
 
 subprojects {
   apply(plugin = "org.jetbrains.kotlin.jvm")
-  apply(plugin = "org.jetbrains.kotlin.plugin.spring")
-  apply(plugin = "org.springframework.boot")
-  apply(plugin = "io.spring.dependency-management")
 
   configure<JavaPluginExtension> {
     toolchain {
       languageVersion = JavaLanguageVersion.of(21)
     }
   }
-
 
   tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     compilerOptions {
@@ -36,4 +32,10 @@ subprojects {
   tasks.withType<Test> {
     useJUnitPlatform()
   }
+}
+
+configure(subprojects.filter { it.name != "common" }) {
+  apply(plugin = "org.jetbrains.kotlin.plugin.spring")
+  apply(plugin = "org.springframework.boot")
+  apply(plugin = "io.spring.dependency-management")
 }

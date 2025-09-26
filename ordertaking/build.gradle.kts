@@ -6,6 +6,9 @@ plugins {
 }
 
 dependencies {
+  // Common module dependency
+  implementation(project(":common"))
+
   // Common Spring dependencies using version catalog
   implementation(libs.bundles.spring.common)
 

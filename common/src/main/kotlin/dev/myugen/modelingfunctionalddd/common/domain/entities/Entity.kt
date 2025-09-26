@@ -1,6 +1,6 @@
-package dev.myugen.modelingfunctionalddd.ordertaking.domain.entities
+package dev.myugen.modelingfunctionalddd.common.domain.entities
 
-import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.Id
+import dev.myugen.modelingfunctionalddd.common.domain.values.Id
 
 abstract class Entity<T : Id<*>>(open val id: T) {
 

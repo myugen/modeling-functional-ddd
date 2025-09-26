@@ -1,6 +1,6 @@
 package dev.myugen.modelingfunctionalddd.ordertaking.domain.aggregators
 
-import dev.myugen.modelingfunctionalddd.ordertaking.domain.entities.Entity
+import dev.myugen.modelingfunctionalddd.common.domain.entities.Entity
 import dev.myugen.modelingfunctionalddd.ordertaking.domain.entities.OrderLine
 import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.*
 import java.math.BigDecimal

@@ -1,5 +1,6 @@
 package dev.myugen.modelingfunctionalddd.ordertaking.domain.entities
 
+import dev.myugen.modelingfunctionalddd.common.domain.entities.Entity
 import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.*
 
 data class OrderLine private constructor(
