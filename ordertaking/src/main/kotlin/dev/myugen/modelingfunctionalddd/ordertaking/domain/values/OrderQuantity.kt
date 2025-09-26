@@ -1,10 +1,12 @@
-package dev.myugen.modelingfunctionalddd.ordertaking.domain
+package dev.myugen.modelingfunctionalddd.ordertaking.domain.values
+
+import java.math.BigDecimal
 
 sealed interface OrderQuantity {
   @JvmInline
-  value class Kilogram private constructor(val value: Double) : OrderQuantity {
+  value class Kilogram private constructor(val value: BigDecimal) : OrderQuantity {
     companion object {
-      fun of(value: Double): Kilogram {
+      fun of(value: BigDecimal): Kilogram {
         return Kilogram(value)
       }
     }

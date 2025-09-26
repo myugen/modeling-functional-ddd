@@ -1,4 +1,4 @@
-package dev.myugen.modelingfunctionalddd.ordertaking.domain
+package dev.myugen.modelingfunctionalddd.ordertaking.domain.values
 
 abstract class Id<T>(open val value: T) {
   override fun equals(other: Any?): Boolean = when {

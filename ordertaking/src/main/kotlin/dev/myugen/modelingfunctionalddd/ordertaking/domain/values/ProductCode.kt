@@ -1,4 +1,4 @@
-package dev.myugen.modelingfunctionalddd.ordertaking.domain
+package dev.myugen.modelingfunctionalddd.ordertaking.domain.values
 
 sealed interface ProductCode {
   @JvmInline
