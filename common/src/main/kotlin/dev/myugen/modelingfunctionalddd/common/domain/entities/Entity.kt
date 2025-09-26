@@ -11,5 +11,5 @@ abstract class Entity<T : Id<*>>(open val id: T) {
     else -> true
   }
 
-  override fun hashCode(): Int = id?.hashCode() ?: 0
+  override fun hashCode(): Int = id.hashCode()
 }

@@ -8,5 +8,5 @@ abstract class Id<T>(open val value: T) {
     else -> true
   }
 
-  override fun hashCode(): Int = value?.hashCode() ?: 0
+  override fun hashCode(): Int = value.hashCode()
 }
