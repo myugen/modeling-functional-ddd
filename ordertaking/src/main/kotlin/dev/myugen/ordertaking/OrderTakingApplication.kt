@@ -1,11 +1,11 @@
-package dev.myugen.modelingfunctionalddd
+package dev.myugen.ordertaking
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ModelingFunctionalDddApplication
+class OrderTakingApplication
 
 fun main(args: Array<String>) {
-  runApplication<ModelingFunctionalDddApplication>(*args)
+    runApplication<OrderTakingApplication>(*args)
 }

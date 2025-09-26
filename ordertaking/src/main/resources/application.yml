@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ordertaking
+
+logging:
+  level:
+    dev.myugen.ordertaking: DEBUG
