@@ -1,18 +1,6 @@
 package dev.myugen.modelingfunctionalddd.ordertaking.domain.entities
 
-import dev.myugen.modelingfunctionalddd.ordertaking.domain.aggregators.OrderId
-import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.Id
-import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.OrderQuantity
-import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.Price
-import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.ProductCode
-import java.util.*
-
-data class OrderLineId private constructor(override val value: String) : Id<String>(value) {
-  companion object {
-    fun of(value: String): OrderLineId = OrderLineId(value)
-    fun generate(): OrderLineId = OrderLineId(UUID.randomUUID().toString())
-  }
-}
+import dev.myugen.modelingfunctionalddd.ordertaking.domain.values.*
 
 data class OrderLine private constructor(
   override val id: OrderLineId,
