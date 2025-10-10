@@ -30,8 +30,8 @@ class ProductCodeShould {
   class WidgetProductCodeArgumentsProvider : ArgumentsProvider {
     override fun provideArguments(context: ExtensionContext?): Stream<out Arguments> {
       return Stream.of(
-        Arguments.of("W123", "W123"),
-        Arguments.of("X123", "Invalid Widget code, X123. Valid format is WXXX where X is a digit"),
+        Arguments.of("W1234", "W1234"),
+        Arguments.of("X123", "Invalid Widget code, X123. Valid format is WXXXX where X is a digit"),
       )
     }
   }
@@ -39,8 +39,8 @@ class ProductCodeShould {
   class GizmoProductCodeArgumentsProvider : ArgumentsProvider {
     override fun provideArguments(context: ExtensionContext?): Stream<out Arguments> {
       return Stream.of(
-        Arguments.of("G12", "G12"),
-        Arguments.of("Y12", "Invalid Gizmo code, Y12. Valid format is GXX where X is a digit"),
+        Arguments.of("G123", "G123"),
+        Arguments.of("Y12", "Invalid Gizmo code, Y12. Valid format is GXXX where X is a digit"),
       )
     }
   }

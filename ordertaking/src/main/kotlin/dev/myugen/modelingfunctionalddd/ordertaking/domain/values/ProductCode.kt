@@ -9,10 +9,10 @@ sealed interface ProductCode {
   value class Widget private constructor(val value: String) : ProductCode {
     companion object {
       fun of(value: String): Either<String, Widget> = either {
-        val isValidWidgetCode = value.length == 4
+        val isValidWidgetCode = value.length == 5
           && value.startsWith("W")
           && value.substring(1).all { it.isDigit() }
-        ensure(isValidWidgetCode) { "Invalid Widget code, $value. Valid format is WXXX where X is a digit" }
+        ensure(isValidWidgetCode) { "Invalid Widget code, $value. Valid format is WXXXX where X is a digit" }
         Widget(value)
       }
 
@@ -24,10 +24,10 @@ sealed interface ProductCode {
   value class Gizmo private constructor(val value: String) : ProductCode {
     companion object {
       fun of(value: String): Either<String, Gizmo> = either {
-        val isValidGizmoCode = value.length == 3
+        val isValidGizmoCode = value.length == 4
           && value.startsWith("G")
           && value.substring(1).all { it.isDigit() }
-        ensure(isValidGizmoCode) { "Invalid Gizmo code, $value. Valid format is GXX where X is a digit" }
+        ensure(isValidGizmoCode) { "Invalid Gizmo code, $value. Valid format is GXXX where X is a digit" }
         Gizmo(value)
       }
 
